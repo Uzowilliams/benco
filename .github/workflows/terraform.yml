@@ -10,6 +10,9 @@ jobs:
     name: "Terraform Plan and Apply"
     runs-on: ubuntu-latest
 
+    env:
+      TFC_TOKEN_app_terraform_io: ${{ secrets.TFC_TOKEN_app_terraform_io }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
